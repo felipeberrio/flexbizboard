@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexBizBoard</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>FlexBizBoard</h2>
+      <nav>
+        <ul>
+          <li>Inicio</li>
+          <li>Plan de Proyecto</li>
+          <li>Costos y Presupuestos</li>
+          <li>Ventas y Ganancias</li>
+          <li>Resumen Financiero</li>
+          <li>Base de Ideas</li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+        <section class="top-bar">
+        <label for="negocio">Negocio:</label>
+        <select id="negocio">
+            <option value="" disabled selected>Selecciona un negocio</option>
+        </select>
+
+        <input type="text" id="nuevoNegocio" placeholder="Escribe un nuevo negocio">
+        <button id="agregarNegocio">Agregar</button>
+        <button id="borrarNegocio">Borrar</button>
+        </section>
+
+        <h2 id="negocio-actual">Negocio activo: Ninguno</h2>
+
+      <section class="metrics">
+        <div class="card">Ganancias Netas<br><strong>$9,500</strong></div>
+        <div class="card">Inversión Inicial<br><strong>$4,000</strong></div>
+        <div class="card">Balance Final<br><strong>$13,500</strong></div>
+        <div class="card">Costo Total vs Ingreso Total<br><strong>$7,500 vs $17,000</strong></div>
+      </section>
+
+        <section class="project-plan">
+            <h3>Plan de Proyecto</h3>
+            <input type="text" placeholder="Nombre del Negocio">
+            <input type="date">
+            <input type="date">
+            <textarea placeholder="Descripción"></textarea>
+        </section>
+
+        <section class="costos">
+        <h3>Costos - Materiales</h3>
+        <div class="formulario-material">
+            <span>Clave: <strong id="clave-generada">...</strong></span>
+            <input type="text" id="material-nombre" placeholder="Nombre del material">
+            <input type="text" id="material-unidad" placeholder="Unidad (m², m³, caja...)">
+            <input type="number" id="material-costo" placeholder="Costo unitario">
+            <input type="number" id="material-cantidad" placeholder="Cantidad">
+            <button id="agregar-material">Agregar</button>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Clave</th>
+                <th>Material</th>
+                <th>Unidad</th>
+                <th>Costo Unitario</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th>Acción</th>
+            </tr>
+            </thead>
+            <tbody id="tabla-materiales"></tbody>
+        </table>
+
+        <div id="total-materiales">Total en materiales: $0</div>
+        </section>
+
+        <section class="mano-obra">
+        <h3>Costos - Mano de Obra</h3>
+        <div class="formulario-obra">
+            <span>Clave autogenerada: <strong id="clave-obra-generada">...</strong></span>
+            <input type="text" id="obra-cargo" placeholder="Cargo (ej: Ayudante)">
+            <input type="number" id="obra-horas" placeholder="Horas trabajadas">
+            <input type="number" id="obra-tarifa" placeholder="Costo por hora">
+            <button id="agregar-obra">Agregar</button>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Clave</th>
+                <th>Cargo</th>
+                <th>Horas</th>
+                <th>Tarifa</th>
+                <th>Total</th>
+                <th>Acción</th>
+            </tr>
+            </thead>
+            <tbody id="tabla-obra"></tbody>
+        </table>
+
+        <div id="total-obra">Total mano de obra: $0</div>
+        </section>
+        <section class="gastos">
+        <h3>Costos - Desplazamiento y Producción</h3>
+        <div class="formulario-gasto">
+            <span>Clave autogenerada: <strong id="clave-gasto-generada">...</strong></span>
+            <input type="text" id="gasto-nombre" placeholder="Nombre del gasto (ej: Gasolina)">
+            <select id="gasto-tipo">
+            <option value="Desplazamiento">Desplazamiento</option>
+            <option value="Producción">Producción</option>
+            </select>
+            <input type="text" id="gasto-unidad" placeholder="Unidad (km, galón, día)">
+            <input type="number" id="gasto-costo" placeholder="Costo unitario">
+            <input type="number" id="gasto-cantidad" placeholder="Cantidad">
+            <button id="agregar-gasto">Agregar</button>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Clave</th>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Unidad</th>
+                <th>Costo Unitario</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th>Acción</th>
+            </tr>
+            </thead>
+            <tbody id="tabla-gastos"></tbody>
+        </table>
+
+        <div id="total-gastos">Total en desplazamiento/producción: $0</div>
+        </section>
+
+        <section class="resumen-financiero">
+        <h3>Resumen Financiero</h3>
+        <div id="resumen">
+            <p>🧱 Materiales: <strong id="res-mat">$0</strong></p>
+            <p>🧑‍🔧 Mano de Obra: <strong id="res-obra">$0</strong></p>
+            <p>🚚 Desplazamiento/Producción: <strong id="res-gasto">$0</strong></p>
+            <p>💰 Inversión Total: <strong id="res-inversion">$0</strong></p>
+            <p>💵 Ingreso Bruto: <strong id="res-bruto">$0</strong></p>
+            <p>📈 Ingreso Neto: <strong id="res-neto">$0</strong></p>
+            <p>📊 Margen de Ganancia: <strong id="res-margen">0%</strong></p>
+            <p>🧾 Balance Final: <strong id="res-balance">$0</strong></p>
+            <button onclick="actualizarResumen()">Actualizar Resumen</button>
+        </div>
+        </section>
+
+        <section class="ventas">
+        <h3>Registro de Ventas</h3>
+        <div class="formulario-venta">
+            <span>Clave autogenerada: <strong id="clave-venta-generada">...</strong></span>
+            <input type="text" id="venta-nombre" placeholder="Producto o servicio">
+            <input type="number" id="venta-cantidad" placeholder="Cantidad">
+            <input type="number" id="venta-precio" placeholder="Precio unitario">
+            <select id="venta-metodo">
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta</option>
+            <option value="Zelle">Zelle</option>
+            <option value="Otro">Otro</option>
+            </select>
+            <button id="agregar-venta">Agregar</button>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Clave</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total</th>
+                <th>Método</th>
+                <th>Acción</th>
+            </tr>
+            </thead>
+            <tbody id="tabla-ventas"></tbody>
+        </table>
+
+        <div id="total-ventas">Ingreso Bruto Total: $0</div>
+        </section>
+
+        <button id="guardar-negocio">💾 Guardar Negocio</button>
+        <button id="cargar-negocio">📂 Cargar Negocio</button>
+
+
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    color: #333;
+}
+#negocio {
+    padding: 6px 12px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.top-bar {
+  margin-bottom: 20px;
+}
+
+.top-bar input, .top-bar button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.formulario-material input {
+  padding: 6px;
+  margin: 5px;
+  width: 160px;
+}
+
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #1e3a8a;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  min-width: 200px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.mano-obra {
+  margin-top: 40px;
+}
+
+.formulario-obra input {
+  padding: 6px;
+  margin: 5px;
+  width: 160px;
+}
+
+.gastos {
+  margin-top: 40px;
+}
+
+.formulario-gasto input,
+.formulario-gasto select {
+  padding: 6px;
+  margin: 5px;
+  width: 160px;
+}
+
+.resumen-financiero {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f0f4ff;
+  border-radius: 8px;
+}
+
+#resumen p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+#resumen button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-weight: bold;
+}

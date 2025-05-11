@@ -1,0 +1,9 @@
+{
+  "negocio": "Ejemplo de venta de sándwiches",
+  "materiales": [
+    { "nombre": "Pan", "costo_unitario": 0.5, "cantidad": 20 }
+  ],
+  "mano_obra": [
+    { "nombre": "Cocinero", "horas": 5, "tarifa": 10 }
+  ]
+}
