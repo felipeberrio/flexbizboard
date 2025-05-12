@@ -1,99 +1,71 @@
-# FlexBizBoard
+# 🚀 FlexBizBoard
 
-Dashboard administrativo flexible para calcular y visualizar ingresos, costos e inversiones de cualquier tipo de negocio (desde ventas callejeras hasta eventos de música electrónica).
+> El dashboard universal para emprendedores versátiles.
 
-## Características
-- Selector de tipo de negocio
-- Cálculo de ingresos netos, brutos e inversión
-- Registro de materiales, producción y mano de obra
-- Dashboard con métricas y tablas
+**FlexBizBoard** es una herramienta web que permite calcular, visualizar y controlar los costos, ingresos y márgenes de negocio en cualquier tipo de proyecto, desde venta de sándwiches hasta eventos de música electrónica.
 
-## Estructura
-- HTML + CSS + JavaScript
-- Base de datos inicial en JSON
+---
 
+## 🎯 Funcionalidades
 
+✅ Registro detallado de:
+- 🧱 **Materiales** (clave, unidad, costo, cantidad)  
+- 👷‍♂️ **Mano de Obra** (clave, cargo, horas, tarifa)  
+- 🚚 **Desplazamiento y Producción** (tipo, unidad, cantidad)  
+- 💵 **Ventas** (productos/servicios, precio, método de pago)
 
+✅ Generación automática de claves únicas por ítem  
+✅ Cálculo en tiempo real de costos totales por categoría  
+✅ Margen de ganancia y balance final  
+✅ Múltiples negocios guardados y recuperables  
+✅ 100% en el navegador – sin bases de datos externas  
+✅ Deploy en Vercel listo para compartir
 
+---
 
+## 🖼️ Demo Online
 
-🧭 PLAN GENERAL DE FLEXBIZBOARD
-📋 "De la idea a la web publicada"
+👉 [flexbizboard.vercel.app](https://flexbizboard.vercel.app) ← *(actualiza este link cuando publiques)*
 
-🔹 FASE 1 – DEFINICIÓN DEL PRODUCTO (Ideación y preparación)
-[✅] Definir propósito del dashboard (multi-negocios: techno, comida, reventa, etc.)
+---
 
-[✅] Especificar métricas clave: ingresos brutos/netos, inversión, mano de obra, materiales...
+## 🛠️ Tecnologías utilizadas
 
-[✅] Crear mockup o wireframe visual
+- HTML5 + CSS3 (Vanilla)
+- JavaScript puro
+- `localStorage` para persistencia
+- Git + GitHub
+- Vercel para hosting gratuito
 
-[✅] Elegir tecnologías: HTML + CSS + JS (sin frameworks aún)
+---
 
-[✅] Definir estructura de carpetas profesional
+## 📦 Estructura del Proyecto
 
-🔹 FASE 2 – SETUP DEL PROYECTO (Base técnica mínima viable)
-[✅] Crear carpeta del proyecto con toda la estructura (style, js, assets, etc.)
+flexbizboard/
+│
+├── index.html # Estructura principal
+├── style/
+│ └── style.css # Estilos globales
+├── js/
+│ └── app.js # Lógica del dashboard
+├── assets/
+│ └── images/ # Logos o íconos (opcional)
+├── data/
+│ └── sample.json # Modelo de referencia
+└── README.md # Este archivo
 
-[✅] Crear archivos base (index.html, style.css, app.js, README.md, sample.json)
+---
 
-[✅] Conectar correctamente HTML con CSS y JS
+## 📌 Capturas de Pantalla
 
-[✅] Agregar estilos iniciales y esqueleto funcional básico
+*(Agrega imágenes si quieres. Puedes usar [imgur.com](https://imgur.com) y pegar el link así:)*
 
-📍 Estado actual: Estamos terminando esta fase.
-👉 Siguiente paso: implementar el primer módulo funcional (por ejemplo, módulo de materiales o ventas)
+---
 
-🔹 FASE 3 – DESARROLLO DE FUNCIONALIDADES (Frontend dinámico)
- Crear sistema de selección de tipo de negocio
+## 💡 Futuras Mejoras (v2.0)
 
-[✅] Implementar módulo de costos (agregar materiales, mano de obra, transporte, etc.)
-
-[✅] Implementar módulo de ventas y ganancias
-
-[✅] Crear cálculo automático de:
-
-[✅] Ingreso bruto
-
-[✅] Ingreso neto
-
-[✅] Margen de ganancia
-
-[✅] Inversión total vs balance final
-
-[✅] Agregar visualización de datos (con gráficos tipo Recharts, Chart.js o similar)
-
-[✅] Conectar con base de datos local (sample.json) o persistencia simple con localStorage
-
-[✅] Crear estructura de componentes reutilizables (HTML templates o JS dinámico)
-
-🔹 FASE 4 – INTERFAZ Y USABILIDAD (UX/UI y visuales)
- Mejorar diseño visual y responsividad
-
- Agregar navegación entre secciones
-
- Implementar modo oscuro (opcional)
-
- Validaciones de formulario y UX amigable
-
- Íconos, feedback visual, tooltips
-
-🔹 FASE 5 – TESTEO Y MEJORAS (QA y ajustes)
- Probar flujos completos de negocio real (ej. vender sándwiches)
-
- Revisar cálculos automáticos
-
- Corregir errores de consola o estilos rotos
-
- Optimización de código
-
-🔹 FASE 6 – PUBLICACIÓN (Deploy y compartir)
- Subir el proyecto a GitHub
-
- Hacer deploy gratuito en Vercel o Netlify
-
- Generar link público (ej. flexbizboard.vercel.app)
-
- Redactar README detallado
-
- Compartir con testers o amigos para feedback
-
+- 📈 Integración con gráficos (Chart.js o Recharts)
+- 🔐 Autenticación de usuarios
+- ☁️ Guardado en la nube con Supabase o Firebase
+- 🧾 Exportar reportes a PDF
+- 📱 Versión responsive para móviles
