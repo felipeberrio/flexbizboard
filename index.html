@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FlexBizBoard</title>
   <link rel="stylesheet" href="style/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="dashboard">
@@ -35,20 +36,15 @@
 
         <h2 id="negocio-actual">Negocio activo: Ninguno</h2>
 
-      <section class="metrics">
-        <div class="card">Ganancias Netas<br><strong>$9,500</strong></div>
-        <div class="card">Inversión Inicial<br><strong>$4,000</strong></div>
-        <div class="card">Balance Final<br><strong>$13,500</strong></div>
-        <div class="card">Costo Total vs Ingreso Total<br><strong>$7,500 vs $17,000</strong></div>
-      </section>
 
-        <section class="project-plan">
+
+        <!-- <section class="project-plan">
             <h3>Plan de Proyecto</h3>
             <input type="text" placeholder="Nombre del Negocio">
             <input type="date">
             <input type="date">
             <textarea placeholder="Descripción"></textarea>
-        </section>
+        </section> -->
 
         <section class="costos">
         <h3>Costos - Materiales</h3>
@@ -82,7 +78,7 @@
         <section class="mano-obra">
         <h3>Costos - Mano de Obra</h3>
         <div class="formulario-obra">
-            <span>Clave autogenerada: <strong id="clave-obra-generada">...</strong></span>
+            <span>Clave: <strong id="clave-obra-generada">...</strong></span>
             <input type="text" id="obra-cargo" placeholder="Cargo (ej: Ayudante)">
             <input type="number" id="obra-horas" placeholder="Horas trabajadas">
             <input type="number" id="obra-tarifa" placeholder="Costo por hora">
@@ -108,7 +104,7 @@
         <section class="gastos">
         <h3>Costos - Desplazamiento y Producción</h3>
         <div class="formulario-gasto">
-            <span>Clave autogenerada: <strong id="clave-gasto-generada">...</strong></span>
+            <span>Clave: <strong id="clave-gasto-generada">...</strong></span>
             <input type="text" id="gasto-nombre" placeholder="Nombre del gasto (ej: Gasolina)">
             <select id="gasto-tipo">
             <option value="Desplazamiento">Desplazamiento</option>
@@ -139,6 +135,16 @@
         <div id="total-gastos">Total en desplazamiento/producción: $0</div>
         </section>
 
+        <section class="graficas">
+          <h3>Gráficas</h3>
+          <button onclick="renderizarGraficas()">Actualizar Gráficas</button>
+          <canvas id="grafica-costos" height="200"></canvas>
+          <canvas id="grafica-balance" height="200"></canvas>
+          <canvas id="grafica-ventas" height="200"></canvas>
+        </section>
+
+
+
         <section class="resumen-financiero">
         <h3>Resumen Financiero</h3>
         <div id="resumen">
@@ -157,7 +163,7 @@
         <section class="ventas">
         <h3>Registro de Ventas</h3>
         <div class="formulario-venta">
-            <span>Clave autogenerada: <strong id="clave-venta-generada">...</strong></span>
+            <span>Clave: <strong id="clave-venta-generada">...</strong></span>
             <input type="text" id="venta-nombre" placeholder="Producto o servicio">
             <input type="number" id="venta-cantidad" placeholder="Cantidad">
             <input type="number" id="venta-precio" placeholder="Precio unitario">
