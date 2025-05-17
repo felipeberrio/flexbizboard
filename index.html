@@ -135,16 +135,6 @@
         <div id="total-gastos">Total en desplazamiento/producción: $0</div>
         </section>
 
-        <section class="graficas">
-          <h3>Gráficas</h3>
-          <button onclick="renderizarGraficas()">Actualizar Gráficas</button>
-          <canvas id="grafica-costos" height="200"></canvas>
-          <canvas id="grafica-balance" height="200"></canvas>
-          <canvas id="grafica-ventas" height="200"></canvas>
-        </section>
-
-
-
         <section class="resumen-financiero">
         <h3>Resumen Financiero</h3>
         <div id="resumen">
@@ -194,8 +184,17 @@
         <div id="total-ventas">Ingreso Bruto Total: $0</div>
         </section>
 
+        <section class="graficas">
+            <h3>Gráficas</h3>
+            <button onclick="renderizarGraficas()">Actualizar Gráficas</button>
+            <canvas id="grafica-costos" height="200"></canvas>
+            <canvas id="grafica-balance" height="200"></canvas>
+            <canvas id="grafica-ventas" height="200"></canvas>
+        </section>
+
         <button id="guardar-negocio">💾 Guardar Negocio</button>
         <button id="cargar-negocio">📂 Cargar Negocio</button>
+
 
 
     </main>
